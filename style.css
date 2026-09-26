@@ -1,4 +1,4 @@
-/* Сброс базовых отступов */
+/* Сброс отступов */
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +13,7 @@ body {
 }
 
 /* ====================
-   1. Шапка (Header)
+   Шапка 
    ==================== */
 .header {
   width: 100%;
@@ -68,17 +68,17 @@ body {
 }
 
 /* ====================
-   2. Hero-секция
+   домик
    ==================== */
 .hero {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Ровно две равные колонки */
-  min-height: calc(100vh - 80px); /* Высота экрана за вычетом шапки */
+  grid-template-columns: 1fr 1fr;
+  min-height: calc(100vh - 80px); 
 }
 
-/* Левая часть */
+
 .hero-content {
-  background-color: #eceaee; /* Светло-бежевый/серый фон из макета */
+  background-color: #eceaee; 
   padding: 80px 10%;
   display: flex;
   flex-direction: column;
@@ -117,7 +117,7 @@ body {
   font-weight: 500;
 }
 
-/* Правая часть */
+
 .hero-image {
   width: 100%;
   height: 100%;
@@ -126,17 +126,11 @@ body {
 .hero-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Изображение заполняет всю колонку без искажений */
+  object-fit: cover;
   display: block;
 }
 
-/* ====================
-   Адаптивность (Мобильные)
-   ==================== */
-@media (max-width: 900px) {
-  .hero {
-    grid-template-columns: 1fr; /* Перестраиваем в одну колонку */
-  }
+
 
   .hero-content {
     padding: 60px 20px;
@@ -147,31 +141,31 @@ body {
   }
 
   .nav {
-    display: none; /* Для мобилок обычно добавляют гамбургер-меню */
+    display: none; 
   }
 }
 
 .about-firm {
   background-color: #ffffff;
-  padding: 120px 40px; /* Отступы сверху и снизу */
+  padding: 120px 40px; 
 }
 
 .about-container {
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 2fr; /* Левая колонка занимает 1 часть, правая — 2 части */
+  grid-template-columns: 1fr 2fr; 
   gap: 60px;
 }
 
-/* Заголовок слева */
+
 .about-title-col h2 {
   font-size: 2.2rem;
   font-weight: 400;
   color: #1a1a1a;
 }
 
-/* Текстовый контент справа */
+
 .about-content-col p {
   font-size: 0.95rem;
   color: #555555;
@@ -179,7 +173,7 @@ body {
   margin-bottom: 24px;
 }
 
-/* Блок автора */
+
 .author-card {
   display: flex;
   align-items: center;
@@ -187,7 +181,7 @@ body {
   margin-top: 32px;
 }
 
-/* Круглая аватарка */
+
 .author-avatar {
   width: 50px;
   height: 50px;
@@ -195,7 +189,7 @@ body {
   object-fit: cover;
 }
 
-/* Текст автора */
+
 .author-info {
   display: flex;
   flex-direction: column;
@@ -212,16 +206,4 @@ body {
   color: #777777;
 }
 
-/* ====================
-   Адаптивность для второго блока
-   ==================== */
-@media (max-width: 900px) {
-  .about-firm {
-    padding: 60px 20px;
-  }
 
-  .about-container {
-    grid-template-columns: 1fr; /* На планшетах и телефонах складываем колонки друг под друга */
-    gap: 30px;
-  }
-}
